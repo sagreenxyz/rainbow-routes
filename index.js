@@ -1,3 +1,5 @@
+// https://digitalskills.instructure.com/courses/3775/pages/rainbow-routes-6-dot-3-2?module_item_id=464419
+
 require('dotenv').config();
 const express = require('express');
 
@@ -31,6 +33,10 @@ app.get('/:color', function (req, res) {
         </body>
     `)
 })
+
+app.post('/:color', (req, res) => {
+    res.send('Hello world');
+});
 
 app.listen(process.env.PORT, () => {
     console.log('I am here!...');
